@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script>		
+
+	</script>
+	<title></title>
+</head>
+<body>
+	
+	
+  	<script>	
+   	var numArray = [];
+var i;
+for (i = 0; i < 3; i++) {
+  numArray.push(i);
+}
+console.log(numArray);
+console.log(i);
+var printNumTwo;
+for (let i = 0; i < 3; i++) {
+  if (i === 2) {
+    printNumTwo = function() {
+      return i;
+    };
+  }
+}
+console.log(printNumTwo());
+	/*hatali kod*/
+function checkScope() {
+	/*asagidaki satirda let yerine var kullanilmasi ve if
+	blogunda let kullanilmamasi bütün i degerlerini var satirindaki gibi atar.*/
+  var i = 'function scope';
+  if (true) {
+    i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+console.log(checkScope());
+	</script>
+</body>
+</html>
